@@ -1,2 +1,2 @@
-# perl
-Learning perl
+# scripts
+Learning py/pl/bash/tcl...
