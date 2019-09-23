@@ -8,7 +8,7 @@ fin = open('nv_1908_in')
 text_lines = fin.read()
 fin.close()
 
-text_words = re.sub(r"[,.@#?!&$]+\ *"""," ",text_lines)
+text_words = re.sub(r"[,.@#?;'!&$]+\ *"""," ",text_lines)
 text_list = text_words.split()
 text_list_lower = [item.lower() for item in text_list]
 text_list_lower.sort()
