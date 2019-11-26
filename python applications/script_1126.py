@@ -1,9 +1,5 @@
 #*****************************************************************************************
 #-----------------------------------------------------------------------------------------
-# Company          : WITINMEM
-# Create by        : Shengwei Lyu
-# Last change date : $Date: 2019.11.26$
-# Revision         : $Revision: 1.0$
 # Function         : Modify netlist file format:
 #			nh -> nhv
 #			ph -> phv
