@@ -1,3 +1,6 @@
+#! /usr/bin/perl –w
+# use strict;
+# use warnings;
 $data0 = 10;		# in perl all numbers are double
 $data1 = 3.1415926;
 $data2 = 2.18e22;

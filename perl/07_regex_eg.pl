@@ -1,3 +1,6 @@
+#! /usr/bin/perl –w
+use strict;
+use warnings;
 # eg:	check numbers in a string, if <2, output chars before first num
 #		else, find chars between last 2 nums, switch U/L cases,
 #		'a' 'b' 'd' to '0', except 'a' and 'd' in 'abcd'

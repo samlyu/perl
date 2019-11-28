@@ -1,3 +1,4 @@
+#! /usr/bin/perl –w
 # arithmetic
 # + - * /
 # strings:
@@ -9,16 +10,18 @@ my $number1 = 5;
 my $result1 = $string1 + $number1;	# from left to right, if not 0~9, discard right part
 my $result2 = $string2 + $number1;
 my $result3 = $string3 + $number1;
-print("$result1 \n");	# 5
-print("$result2 \n");	# 8
-print("$result3 \n");	# 35
+print("$string1 + $number1 = $result1 \n");	# 5
+print("$string2 + $number1 = $result2 \n");	# 8
+print("$string3 + $number1 = $result3 \n");	# 35
 # exponential **
-$test=(-5)**2.5;
-print("$test\n");		# NaN
+$test=(-5)**2;
+$test1=(-5)**2.5;
+print("-5 ^ 2 = $test\n");
+print("-5 ^ 2.5 = $test1\n");		# NaN
 # mod %
 ($data1, $data2)=(18,4);
 $data3 = $data1 % $data2;
-print("$data3\n");
+print("$data1 % $data2 = $data3\n");
 # self reduction
 $data4 = -5;
 $data5 = --$data4;		# both -6 (--left instant -1, --right, return self, next -1)
@@ -30,10 +33,10 @@ my $data1 = 0b100_100;
 my $data2 = 0b011_110;
 if($data1 && $data2)
 {
-	print("not all zero\n");
+	print("$data1 && $data2 not all zero\n");
 }
 my $data3 = $data1 & $data2;
-print("$data3\n");
+print("$data1 & $data2 = $data3\n");
 # assign
 $data1 = $data2 = $dat3 = "string";
 # others

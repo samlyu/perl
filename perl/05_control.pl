@@ -1,3 +1,4 @@
+#! /usr/bin/perl –w
 use strict;
 use warnings;
 my @array = (1,2,3..50,55,60,43,32,82..99);

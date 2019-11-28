@@ -1,3 +1,6 @@
+#! /usr/bin/perl –w
+# use strict;
+# use warnings;
 @array0 = ("string1", 1.5, 418);
 @array0 = qw(string1 string2 string3);	# do not need quotation marks
 $test1 = "Hello";
