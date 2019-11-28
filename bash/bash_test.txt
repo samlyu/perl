@@ -1,0 +1,4 @@
+2 this is a test
+3 Do you like AWK
+4 This's a test
+10 there are oranges, apples,mongos
