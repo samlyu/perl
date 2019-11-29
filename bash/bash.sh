@@ -1,12 +1,18 @@
 #!/bin/bash
-echo "Hello World!"
+### BASH notes and examples
+
+## function
+Hello () {
+echo "Hello World by $*"
+}
+Hello shengwei
 
 ## string
 # new a variable and print
 var="123"
 echo $var
 # list files in directory
-for file in $(ls /home/shengwei); do
+for file in $(ls -a ~); do
 	echo "file name:${file}"
 done
 # concatenate
@@ -52,8 +58,8 @@ done
 a=10
 b=20
 # + - \* / %
-echo "`expr $a + $b`"
-echo "`expr $a \* $b`"
+echo "a + b = `expr $a + $b`"
+echo "a * b = `expr $a \* $b`"
 # -eq -ne -gt -lt -ge -le
 if [ $a -eq $b ]
 then
@@ -77,7 +83,8 @@ echo line3
 # display command result
 echo `ls`
 
-## if
+## control
+# if
 num1=$[2*3]
 num2=$[1+5]
 if test $[num1] -eq $[num2]
@@ -91,7 +98,7 @@ for loop in 1 2 3 4 5
 do
 	echo -e "$loop \c"
 done
-
+# while
 int=1
 while(($int<=5))
 do 
