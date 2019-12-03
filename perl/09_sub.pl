@@ -3,8 +3,7 @@ use strict;
 use warnings;
 
 # sub 
-# call function:
-# &subname; sub subname{}
+# call function: &subname; sub subname{}
 
 my $result = &add(1,2);
 $result = $result + 1;
@@ -15,9 +14,9 @@ sub add
 {
 	my @array = @_;
 	my $val = 0;
-	foreach my $item(@array)
+	foreach my $i(@array)
 	{
-		$val = $val + $item;
+		$val = $val + $i;
 	}
 	return $val;	# all ignored after return
 }
