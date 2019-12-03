@@ -1,4 +1,4 @@
-#! /usr/bin/perl –w
+#!/usr/bin/perl
 use strict;
 use warnings;
 # eg:	check numbers in a string, if <2, output chars before first num
