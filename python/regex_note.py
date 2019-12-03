@@ -53,11 +53,6 @@ print(res)
 # (?<=zzz)xxx	matches xxx following zzz (zzz not included)
 # (?<!zzz)xxx	matches xxx not following zzz (zzz not included)
 
-## Flags
-# i	case insensitive
-# g	global search
-# m	multiline
-
 res = re.sub(r'rub[y|e]', 'match', 'rube ruby')
 print(res)
 
