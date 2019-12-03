@@ -50,6 +50,13 @@ print(res)
 # \2	matches whatever the 2nd group matched
 # xxx(?=zzz)	matches xxx followed by zzz (zzz not included)
 # xxx(?!zzz)	matches xxx not followed by zzz
+# (?<=zzz)xxx	matches xxx following zzz (zzz not included)
+# (?<!zzz)xxx	matches xxx not following zzz (zzz not included)
+
+## Flags
+# i	case insensitive
+# g	global search
+# m	multiline
 
 res = re.sub(r'rub[y|e]', 'match', 'rube ruby')
 print(res)
@@ -70,4 +77,16 @@ res = re.sub(r'python(?=[!|?])', 'match', 'python python! python!! python?')
 print(res)
 
 res = re.sub(r'python(?![!|?])', 'match', 'python python! python!! python?')
+print(res)
+
+res = re.sub(r'(?<=[!|?])python', 'match', 'python !python ?python')
+print(res)
+
+res = re.sub(r'(?<![!|?])python', 'match', 'python !python ?python')
+print(res)
+
+res = re.sub(r'.*the', 'match', 'the fat cat sat on the mat')
+print(res)
+
+res = re.sub(r'.*?the', 'match', 'the fat cat sat on the mat')
 print(res)
