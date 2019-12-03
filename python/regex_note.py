@@ -44,6 +44,12 @@ print(res)
 # \D	matches nondigits
 # \A	matches beginning of string
 # \Z	matches end of string before newline
+# .*	matches any char (greedy)
+# .*?	matches any char (lazy)
+# \1	matches whatever the 1st group matched
+# \2	matches whatever the 2nd group matched
+# xxx(?=zzz)	matches xxx followed by zzz (zzz not included)
+# xxx(?!zzz)	matches xxx not followed by zzz
 
 res = re.sub(r'rub[y|e]', 'match', 'rube ruby')
 print(res)
@@ -54,3 +60,14 @@ print(res)
 res = re.sub(r'[^0-9]', 'nonum ', '1a2s3d4f')
 print(res)
 
+res = re.sub(r'^\d+', 'nonum ', '12222a2s3d4f')
+print(res)
+
+res = re.sub(r'python(!+|\?)', 'match', 'python python! python!! python?')
+print(res)
+
+res = re.sub(r'python(?=[!|?])', 'match', 'python python! python!! python?')
+print(res)
+
+res = re.sub(r'python(?![!|?])', 'match', 'python python! python!! python?')
+print(res)
