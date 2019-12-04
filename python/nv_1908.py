@@ -4,7 +4,7 @@ import re
 text_keys = []
 text_count = []
 
-fin = open('nv_1908_in')
+fin = open('nv_1908')
 text_lines = fin.read()
 fin.close()
 
@@ -18,7 +18,7 @@ for l,s in text_combined:
     text_count.append(len(list(s)))
     text_keys.append(l)
 
-fout = open('nv_1908_out','w')
+fout = open('nv_1908_new','w')
 for i in range(len(text_count)):
     fout.write(text_keys[i] + '\t' + str(text_count[i]) + '\n')
 

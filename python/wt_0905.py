@@ -4,7 +4,7 @@ wr = []
 addr = []
 data = []
 
-f1 = open('old_0905')
+f1 = open('wt_0905')
 while 1:
     line = f1.readline()
     if not line:
@@ -23,7 +23,7 @@ f1.close()
 # print(addr)
 # print(data)
 
-f2 = open('new_0905','w')
+f2 = open('wt_0905_new','w')
 for i in range(len(wr)):
     if(wr[i]=='1'):
         f2.write('WRITE16(WTN_AI_START_ADDR + (')

@@ -1,4 +1,4 @@
-fin = open('nv_1903_in')
+fin = open('nv_1903')
 rpt_lines = fin.readlines()
 Add = rpt_lines[1].split()[1:]
 Mul = rpt_lines[2].split()[1:]
@@ -8,7 +8,7 @@ Con = rpt_lines[5].split()[1:]
 Pip = rpt_lines[6].split()[1:]
 Pro = rpt_lines[7].split()[1:]
 
-fout = open('nv_1903_out','w')
+fout = open('nv_1903_new','w')
 RAM_AREA_PER = ( float(Sma[0])*float(Sma[1]) + float(Lar[0])*float(Lar[1]) ) / ( float(Add[0])*float(Add[1]) + float(Mul[0])*float(Mul[1]) + float(Sma[0])*float(Sma[1])+float(Lar[0])*float(Lar[1]) + float(Con[0])*float(Con[1]) + float(Pip[0])*float(Pip[1]) + float(Pro[0])*float(Pro[1]) )*100
 fout.write("RAM_AREA_PER = " + "{:.2f}".format(RAM_AREA_PER) + '%\n')
 
