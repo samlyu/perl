@@ -60,3 +60,9 @@ close MYFILE;
 # -B 'data': return is data is a bin file
 # -M 'data': return num of days after 'data' was modified
 
+# < read only access
+# > write truncate
+# >> write append
+# +< read and write
+# +> read write truncate
+# +>> read write append

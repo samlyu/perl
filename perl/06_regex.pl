@@ -3,6 +3,16 @@ use strict;
 use warnings;
 
 # regular expressions only apply to scalars
+# pattern binding: =~ !~
+
+# m//	match
+# s///	substitute
+# tr///	transliterate
+
+# $&	matched string
+# $`	everything before the matched string
+# $'	everything after the matched string
+
 $_ = "Hello World";
 if(/World/){printf("match\n")};
 
@@ -27,7 +37,7 @@ $_ = "HelloWorld";
 if(/Hello(|my)World/){printf("match_3\n")};
 
 # metacharacter
-# .			: everything except \n
+# .		: everything except \n
 # a-z 0-9	: any single char of these
 # ^a-z 0-9	: any single char not of these
 # \d		: single num
@@ -37,8 +47,8 @@ if(/Hello(|my)World/){printf("match_3\n")};
 # \s		: whitespace tab enter
 # \n \r \t	: wrap enter tab
 # \b		: boundary
-# ^			: beginning of line
-# $			: end of line
+# ^		: beginning of line
+# $		: end of line
 # \A \z		: char only at the beginnning end
 # \Z		: char at end or before newline
 # x?		: 0 or 1 x
@@ -71,10 +81,8 @@ foreach my $item(@matches)
 	print("$item\n");
 }
 
-
-# pattern replacement s//
+# s///
 # e		: not string but expression
-
 my $var1 = "0abc1";
 $var1 =~s/[a-zA-Z]+/3*2/e;
 print $var1."\n";
@@ -82,8 +90,7 @@ $var1 = "0abc1";
 $var1 =~s/[a-zA-Z]+/3*2/;
 print $var1."\n";
 
-
-# pattern transform tr//
+# tr//
 my $var2 = "abcdfghicba";
 print $var2."\n";
 my $result = $var2 =~tr/abc/def/;	# a->d, b->e, c->f
@@ -93,12 +100,12 @@ $var2 =~tr/defg/DEF/;				# d->D, e->E, f->F, g->F
 print $var2."\n";
 # to count numbers: $str =~tr/0-9/0-9/;
 # c	: transform all unnamed char
-# s	: delete named char
-# d	: same chars to 1 char
+# d	: delete named char
+# s	: same chars to 1 char
 my $var3 = "12abc3abc";
 $var3 =~tr/0-9/ /cs;
 print $var3."\n";
-
+print "*****";
 my $var4 = "string1 string2";
 my $var5 = "def";
 $var4 =~s/$var4/$var5/;	# replace whole $var4 to $var5
