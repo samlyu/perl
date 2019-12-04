@@ -26,25 +26,25 @@ if(!open (MYFILE, "10_file.pl"))
 }print "another command here\n";
 
 # <read one line>
-open (MYFILE, "pl_test.txt") or die "cannnot open test file:$!\n";
+open (MYFILE, "test.txt") or die "cannnot open test file:$!\n";
 while(my $line = <MYFILE>)
 {
 	print "$line";
 }print "\n";
 close MYFILE;
 
-open (MYFILE, "pl_test.txt") or die "cannnot open test file:$!\n";
+open (MYFILE, "test.txt") or die "cannnot open test file:$!\n";
 my @array = <MYFILE>;
 print @array;
 print "\n";
 close MYFILE;
 
-open (MYFILE, ">>pl_test.txt");	# add >>, overwrite >
+open (MYFILE, ">>test.txt");	# add >>, overwrite >
 print MYFILE "\nline3\n";
 close MYFILE;
 
-open (MYFILE, "pl_test.txt");
-my @array = <MYFILE>;
+open (MYFILE, "test.txt");
+@array = <MYFILE>;
 print @array;
 close MYFILE;
 
