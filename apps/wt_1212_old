@@ -1,0 +1,4 @@
+##GROUP0: Interrupt Test ##
+TEST_NAME=BB02_direct_intr_test                              percent=0.05
+### end old
+

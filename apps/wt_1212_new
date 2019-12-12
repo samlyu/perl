@@ -1,0 +1,4 @@
+####GROUP12: Application Test ##
+##GROUP13: AUDIO Test ##
+TEST_NAME=BB02_audio_fifo_test                              percent=0.01
+## end new

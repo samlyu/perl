@@ -1,0 +1,8 @@
+##GROUP0: Interrupt Test ##
+TEST_NAME=BB02_direct_intr_test                              percent=0.05
+### end old
+
+####GROUP12: Application Test ##
+##GROUP13: AUDIO Test ##
+TEST_NAME=BB02_audio_fifo_test                              percent=0.01
+## end new
